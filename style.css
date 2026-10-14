@@ -118,3 +118,181 @@
         padding: 17px;
     }
 }
+/* ===== PREMIUM MOCCARO MENU ===== */
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px auto 38px;
+  padding: 8px;
+}
+
+.category-btn {
+  border: 1px solid #dfd0bd;
+  border-radius: 30px;
+  padding: 12px 20px;
+  background: #fffaf3;
+  color: #573b2c;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: #4b3025;
+  color: #fff8ed;
+  border-color: #4b3025;
+  box-shadow: 0 6px 16px rgba(75, 48, 37, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Elegant menu grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin: 0 auto 60px;
+}
+
+/* Premium menu cards */
+.menu-card {
+  position: relative;
+  overflow: hidden;
+  padding: 26px 22px;
+  border: 1px solid #eee1d1;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fffdf9, #f8efe3);
+  box-shadow: 0 5px 18px rgba(65, 42, 28, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22px;
+  width: 38px;
+  height: 3px;
+  background: #b78a54;
+  border-radius: 0 0 4px 4px;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(65, 42, 28, 0.11);
+}
+
+.menu-card h3 {
+  color: #432b20;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 8px 0 10px;
+}
+
+.menu-card p {
+  color: #79695d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Special closing section */
+.visit-section {
+  position: relative;
+  overflow: hidden;
+  margin-top: 65px;
+  padding: 55px 28px;
+  border: 1px solid #6e4c38;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #38251d, #674733);
+  color: #fff7ec;
+  text-align: center;
+  box-shadow: 0 16px 35px rgba(56, 37, 29, 0.16);
+}
+
+.visit-section h2,
+.visit-section h3 {
+  color: #f3d6ad;
+  letter-spacing: 0.5px;
+}
+
+.visit-section p {
+  color: #f0e3d5;
+  line-height: 1.8;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #d7b78c;
+  border-radius: 30px;
+  color: #fff5e8;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.contact-links a:hover {
+  background: #d7b78c;
+  color: #38251d;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 28px 15px;
+  border-top: 1px solid #eadbca;
+  color: #79695d;
+  text-align: center;
+}
+
+/* Phone and tablet layout */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .category-list {
+    gap: 9px;
+    margin: 22px auto 28px;
+  }
+
+  .category-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 42px;
+  }
+
+  .menu-card {
+    padding: 23px 20px;
+  }
+
+  .visit-section {
+    margin-top: 40px;
+    padding: 38px 20px;
+    border-radius: 18px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

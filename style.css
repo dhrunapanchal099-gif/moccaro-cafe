@@ -389,3 +389,143 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* ===== MOCCARO SIGNATURE MENU ===== */
+
+.cafe-menu {
+  position: relative;
+  overflow: hidden;
+  padding: 85px 7%;
+  background: #302019;
+  color: #fff5e7;
+  text-align: center;
+  border-top: 4px solid #c5a16c;
+}
+
+.cafe-menu h2 {
+  color: #f8e6c8;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: normal;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+
+.cafe-menu > p {
+  color: #c9a776;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 38px;
+}
+
+.menu-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 950px;
+  margin: 0 auto 42px;
+}
+
+.menu-categories button {
+  padding: 12px 19px;
+  background: transparent;
+  color: #f4e6d3;
+  border: 1px solid #755640;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: .3px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.menu-categories button:hover,
+.menu-categories button:focus {
+  background: #c5a16c;
+  color: #302019;
+  border-color: #c5a16c;
+  outline: none;
+}
+
+#menu-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  border-top: 1px solid #755640;
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 25px 12px;
+  background: transparent;
+  color: #fff5e7;
+  border: 0;
+  border-bottom: 1px solid #604636;
+  border-radius: 0;
+  box-shadow: none;
+  transition: background .25s ease;
+}
+
+.menu-item::before {
+  content: none;
+}
+
+.menu-item:hover {
+  background: #402b21;
+  transform: none;
+  border-color: #8b6b4b;
+  box-shadow: none;
+}
+
+.menu-item span {
+  color: #f6e9d8;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.menu-item strong {
+  color: #d8b77e;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .cafe-menu {
+    padding: 58px 18px;
+  }
+
+  .cafe-menu h2 {
+    font-size: 39px;
+  }
+
+  .cafe-menu > p {
+    letter-spacing: 3px;
+  }
+
+  .menu-categories {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .menu-categories button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  #menu-items {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item {
+    padding: 20px 7px;
+  }
+}

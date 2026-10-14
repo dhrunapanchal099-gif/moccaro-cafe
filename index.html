@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -385,4 +386,103 @@
   </script>
 
 </body>
+<!-- Moccaro Cafe Digital Menu -->
+<section id="menu" class="cafe-menu">
+    <h2>Our Menu</h2>
+    <p>Eat • Drink • Enjoy</p>
+    <div class="menu-categories">
+        <button onclick="showMenu('coffee')">Hot Coffee</button>
+        <button onclick="showMenu('cold')">Cold Coffee</button>
+        <button onclick="showMenu('coolers')">Coolers & Iced Tea</button>
+        <button onclick="showMenu('shakes')">Shakes</button>
+        <button onclick="showMenu('food')">Food & Desserts</button>
+    </div>
+    <div id="menu-items"></div>
+</section>
+<script>
+const menus = {
+    coffee: [
+        ["Espresso", 70],
+        ["Masala Chai", 110],
+        ["Americano", 150],
+        ["Cappuccino", 160],
+        ["Latte", 170],
+        ["Mocha", 170],
+        ["Vanilla Latte", 170],
+        ["Flat White", 180],
+        ["Caramel Latte", 180],
+        ["Hazelnut Latte", 120],
+        ["Macchiato", 200],
+        ["Affogato", 200]
+    ],
+    cold: [
+        ["Iced Americano", 140],
+        ["Classic Cold Brew", 150],
+        ["Iced Cappuccino", 150],
+        ["Iced Latte", 150],
+        ["Vanilla Cold Brew", 160],
+        ["Hazelnut Cold Brew", 160],
+        ["Iced Mocha", 160]
+    ],
+    coolers: [
+        ["Orange Cooler", 180],
+        ["Lemon Iced Tea", 180],
+        ["Mint Iced Tea", 120],
+        ["Masala Coke", 150],
+        ["Watermelon Cooler", 160],
+        ["Berry Blast", 170],
+        ["Peach Iced Tea", 170],
+        ["Blue Lagoon Iced Tea", 170],
+        ["Green Apple Fizz Iced Tea", 180]
+    ],
+    shakes: [
+        ["Vanilla Shake", 150],
+        ["Chocolate Shake", 150],
+        ["Banana Shake", 150],
+        ["Strawberry Shake", 160],
+        ["Mango Shake", 160],
+        ["Caramel Shake", 160],
+        ["Coffee Shake", 170],
+        ["Nutella Shake", 170],
+        ["Oreo Shake", 170],
+        ["Chocolate Peanut Butter Shake", 170]
+    ],
+    food: [
+        ["Jam & Cheese Sandwich", 140],
+        ["Grilled Cheese Sandwich", 150],
+        ["Veggie Cheese Sandwich", 160],
+        ["Tandoori Paneer Sandwich", 180],
+        ["Toasted Bread with Butter", 80],
+        ["Toasted Bread with Jam", 100],
+        ["Garlic Bread", 180],
+        ["Avocado Toast", 250],
+        ["Spaghetti Aglio e Olio", 290],
+        ["Penne Arrabbiata", 300],
+        ["Pesto Pasta", 310],
+        ["Fettuccine Alfredo", 320],
+        ["Simple Maggie", 130],
+        ["Vegetable Maggie", 150],
+        ["French Fries", 170],
+        ["Peri Peri Fries", 190],
+        ["Cheesy Fries", 210],
+        ["Messy Nachos", 220],
+        ["Margarita Pizza", 270],
+        ["Cheesy Overload Pizza", 299],
+        ["Veggie Delight Pizza", 320],
+        ["Chocolate Brownie with Ice Cream", 200],
+        ["Butter Croissant", 200],
+        ["Very Berry Croissant", 220]
+    ]
+};
+function showMenu(category) {
+    const container = document.getElementById("menu-items");
+    container.innerHTML = menus[category].map(item => `
+        <div class="menu-item">
+            <span>${item[0]}</span>
+            <strong>₹${item[1]}</strong>
+        </div>
+    `).join("");
+}
+showMenu("coffee");
+</script>
 </html>

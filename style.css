@@ -1,0 +1,120 @@
+/* ===== Moccaro Cafe Digital Menu ===== */
+
+.cafe-menu {
+    background: #faf6ef;
+    color: #38251d;
+    padding: 70px 20px;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.cafe-menu h2 {
+    font-size: clamp(36px, 5vw, 52px);
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+    color: #4b2e23;
+}
+
+.cafe-menu > p {
+    color: #99765b;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+}
+
+/* Category buttons */
+
+.menu-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1000px;
+    margin: 0 auto 35px;
+}
+
+.menu-categories button {
+    background: transparent;
+    border: 1px solid #a47c5a;
+    color: #593b2c;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu-categories button:hover {
+    background: #593b2c;
+    color: #fffaf3;
+    transform: translateY(-2px);
+}
+
+/* Menu item cards */
+
+#menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.menu-item {
+    background: #fffdf9;
+    border: 1px solid #eee3d6;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 14px rgba(70, 45, 30, 0.04);
+    transition: 0.25s ease;
+}
+
+.menu-item:hover {
+    border-color: #b58b67;
+    box-shadow: 0 8px 20px rgba(70, 45, 30, 0.09);
+    transform: translateY(-3px);
+}
+
+.menu-item span {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.menu-item strong {
+    color: #986a43;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* Mobile responsive layout */
+
+@media (max-width: 600px) {
+    .cafe-menu {
+        padding: 45px 14px;
+    }
+
+    .menu-categories {
+        gap: 8px;
+    }
+
+    .menu-categories button {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    #menu-items {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .menu-item {
+        padding: 17px;
+    }
+}

@@ -296,3 +296,96 @@ footer {
     align-items: stretch;
   }
 }
+/* ===== MOCCARO PREMIUM MENU ===== */
+
+.cafe-menu {
+  padding: 80px 7%;
+  background: #f8f0df;
+  text-align: center;
+}
+
+.cafe-menu h2 {
+  font-size: clamp(36px, 5vw, 54px);
+  color: #432b20;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.menu-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px auto 40px;
+}
+
+.menu-categories button {
+  background: #fffaf2;
+  color: #593b2c;
+  border: 1px solid #d9c3a8;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.menu-categories button:hover,
+.menu-categories button.active {
+  background: #4a2815;
+  color: #fff8ed;
+  border-color: #4a2815;
+  transform: translateY(-2px);
+}
+
+#menu-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 950px;
+  margin: auto;
+  text-align: left;
+}
+
+.menu-item {
+  padding: 24px;
+  background: #fffdf9;
+  border: 1px solid #e7d7c4;
+  border-left: 4px solid #bd9362;
+  border-radius: 5px 18px 18px 5px;
+  box-shadow: 0 5px 18px #462d1e0d;
+  transition: all .25s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px #462d1e18;
+}
+
+.menu-item span {
+  color: #4a2815;
+  font-size: 15px;
+}
+
+.menu-item strong {
+  color: #94663d;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .cafe-menu {
+    padding: 50px 16px;
+  }
+
+  .menu-categories {
+    gap: 8px;
+  }
+
+  .menu-categories button {
+    padding: 10px 13px;
+  }
+
+  #menu-items {
+    grid-template-columns: 1fr;
+  }
+}

@@ -362,7 +362,18 @@
       </a>
     </section>
   </main>
-
+<section id="menu" class="cafe-menu">
+    <h2>Our Menu</h2>
+    <p>Eat • Drink • Enjoy</p>
+    <div class="menu-categories">
+        <button onclick="showMenu('coffee')">Hot Coffee</button>
+        <button onclick="showMenu('cold')">Cold Coffee</button>
+        <button onclick="showMenu('coolers')">Coolers & Iced Tea</button>
+        <button onclick="showMenu('shakes')">Shakes</button>
+        <button onclick="showMenu('food')">Food & Desserts</button>
+    </div>
+    <div id="menu-items"></div>
+</section>
   <footer id="contact">
     <div>
       <div class="logo">Moccaro</div>
@@ -387,18 +398,7 @@
 
 </body>
 <!-- Moccaro Cafe Digital Menu -->
-<section id="menu" class="cafe-menu">
-    <h2>Our Menu</h2>
-    <p>Eat • Drink • Enjoy</p>
-    <div class="menu-categories">
-        <button onclick="showMenu('coffee')">Hot Coffee</button>
-        <button onclick="showMenu('cold')">Cold Coffee</button>
-        <button onclick="showMenu('coolers')">Coolers & Iced Tea</button>
-        <button onclick="showMenu('shakes')">Shakes</button>
-        <button onclick="showMenu('food')">Food & Desserts</button>
-    </div>
-    <div id="menu-items"></div>
-</section>
+
 <script>
 const menus = {
     coffee: [

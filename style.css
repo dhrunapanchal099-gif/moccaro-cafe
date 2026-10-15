@@ -529,3 +529,83 @@ footer {
     padding: 20px 7px;
   }
 }
+/* ===== MOCCARO CAFE ANIMATIONS ===== */
+
+@keyframes moccaroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moccaroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smooth entrance */
+.cafe-menu h1 {
+  animation: moccaroFadeUp 0.8s ease both;
+}
+
+.cafe-menu > p {
+  animation: moccaroFadeUp 0.8s ease 0.15s both;
+}
+
+/* Menu category buttons */
+.menu-categories button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.menu-categories button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 16px #c9a45c44;
+}
+
+/* Menu cards */
+.menu-item {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: moccaroFadeUp 0.6s ease both;
+}
+
+.menu-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #00000030;
+}
+
+/* Smooth image zoom */
+.menu-item img {
+  transition: transform 0.4s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.04);
+}
+
+/* Accessible motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .cafe-menu h1,
+  .cafe-menu > p,
+  .menu-item {
+    animation: none;
+  }
+
+  .menu-categories button,
+  .menu-item,
+  .menu-item img {
+    transition: none;
+  }
+}

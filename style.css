@@ -786,3 +786,64 @@ a:focus-visible {
     font-size: clamp(1.4rem, 6vw, 2rem);
   }
 }
+
+/* ===== MOCCARO PREMIUM HERO ===== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero h1 {
+  text-wrap: balance;
+  animation: moccaroFadeUp 0.9s ease both;
+}
+
+.hero p {
+  animation: moccaroFadeUp 0.9s ease 0.15s both;
+}
+
+.hero .eyebrow {
+  animation: moccaroFadeUp 0.8s ease 0.05s both;
+}
+
+.hero .buttons .btn {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.hero .buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(112, 69, 45, 0.22);
+}
+
+.hero img {
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.015);
+  box-shadow: 0 16px 36px rgba(74, 45, 30, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1,
+  .hero p,
+  .hero .eyebrow {
+    animation: none;
+  }
+
+  .hero .buttons .btn,
+  .hero img {
+    transition: none;
+  }
+
+  .hero .buttons .btn:hover,
+  .hero img:hover {
+    transform: none;
+  }
+}

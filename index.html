@@ -396,6 +396,32 @@
       new Date().getFullYear();
   </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(
+    "section, .about, .gallery, .contact"
+  );
+
+  if (!("IntersectionObserver" in window)) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("moccaro-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  sections.forEach((section) => {
+    section.classList.add("moccaro-reveal");
+    observer.observe(section);
+  });
+});
+</script>
 </body>
 <!-- Moccaro Cafe Digital Menu -->
 

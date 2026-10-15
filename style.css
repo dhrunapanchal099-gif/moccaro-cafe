@@ -721,3 +721,68 @@ a:focus-visible {
     transition: none;
   }
 }
+
+/* ===== MOCCARO MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 768px) {
+  /* Prevent unwanted horizontal scrolling */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Keep images inside their containers */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Make menu and card layouts fit smaller screens */
+  .menu-items,
+  .menu-grid,
+  .gallery-grid,
+  .cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  /* Make cards fit their available space */
+  .menu-item,
+  .card {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Make buttons comfortable to tap */
+  button {
+    min-height: 42px;
+  }
+
+  /* Prevent long text from overflowing */
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Use one column for narrow phones */
+  .menu-items,
+  .menu-grid,
+  .gallery-grid,
+  .cards-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Reduce oversized headings on phones */
+  h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+}

@@ -654,3 +654,70 @@ a:hover {
     transition: none;
   }
 }
+/* ===== MOCCARO LUXURY POLISH ===== */
+
+/* Elegant gold underline for section headings */
+section h2,
+.about h2,
+.gallery h2,
+.contact h2 {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+section h2::after,
+.about h2::after,
+.gallery h2::after,
+.contact h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 2px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #8f6b32, #f1d58a, #8f6b32);
+  transition: width 0.35s ease;
+}
+
+section h2:hover::after,
+.about h2:hover::after,
+.gallery h2:hover::after,
+.contact h2:hover::after {
+  width: 90px;
+}
+
+/* Refined gold border glow on hover */
+button,
+.menu-item,
+.card {
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.menu-item:hover,
+.card:hover {
+  border-color: rgba(201, 164, 92, 0.55);
+  box-shadow: 0 8px 28px rgba(201, 164, 92, 0.13);
+}
+
+/* Smooth, elegant keyboard focus */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #c9a45c;
+  outline-offset: 4px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  section h2::after,
+  .about h2::after,
+  .gallery h2::after,
+  .contact h2::after,
+  button,
+  .menu-item,
+  .card {
+    transition: none;
+  }
+}

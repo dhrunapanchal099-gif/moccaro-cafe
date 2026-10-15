@@ -422,6 +422,48 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+  <script>
+(function () {
+  function initMoccaroAnimations() {
+    const sections = document.querySelectorAll(
+      "section, .about, .gallery, .contact"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+      sections.forEach(function (section) {
+        section.classList.add("moccaro-visible");
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("moccaro-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+
+    sections.forEach(function (section) {
+      section.classList.add("moccaro-reveal");
+      observer.observe(section);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initMoccaroAnimations
+    );
+  } else {
+    initMoccaroAnimations();
+  }
+})();
+</script>
 </body>
 <!-- Moccaro Cafe Digital Menu -->
 

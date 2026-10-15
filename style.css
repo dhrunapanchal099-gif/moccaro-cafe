@@ -609,3 +609,48 @@ footer {
     transition: none;
   }
 }
+/* ===== MOCCARO PREMIUM EFFECTS ===== */
+
+/* Elegant gold button glow */
+button,
+a {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+button:hover,
+a:hover {
+  box-shadow: 0 0 14px rgba(201, 164, 92, 0.22);
+}
+
+/* Scroll reveal starting state */
+.moccaro-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+/* Revealed sections */
+.moccaro-reveal.moccaro-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect visitors' motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .moccaro-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  button,
+  a {
+    transition: none;
+  }
+}
